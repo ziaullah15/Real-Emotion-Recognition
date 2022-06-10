@@ -10,8 +10,7 @@ if not cap.isOpened():
 
 while True:
     ret,frame = cap.read()
-    if frame is None:
-         raise ValueError('Unable to get a frame!')
+  
     result = DeepFace.analyze(frame, actions = ['emotion'])
     
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
